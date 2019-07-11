@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,18 @@ import com.briup.apps.sms.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	
+	@PostMapping("saveOrUpdate")
+	public String saveOrUpdate(User user)
+	{
+		try {
+			userService.saveOrUpdate(user);
+			return "更新成功";
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return e.getLocalizedMessage();
+		}
+	}
 	// http://localhost:8080/school/selectAll
 	@GetMapping("selectAll")
 	public List<User> selectAll(){
