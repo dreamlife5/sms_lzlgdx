@@ -1,5 +1,5 @@
 package com.briup.apps.sms.bean;
-//校园信息
+//校园信息记录
 public class Clazz {
 	private Long id;
 	private String name;
