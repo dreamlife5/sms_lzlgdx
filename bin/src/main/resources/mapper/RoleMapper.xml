@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.apps.sms.dao.RoleDao">
+  <select id="selectAll" resultType="com.briup.apps.sms.bean.Role">
+    select * from sms_role
+  </select>
+  <insert id="insert">
+  insert into sms_role values(null,#{name});
+  </insert>
+
+  <update id="update">
+  	update sms_role
+	set name=#{name},
+	where id = #{id}
+  </update>
+  <delete id="deleteById">
+  	delete from sms_role where id = #{id}
+  </delete>
+  
+</mapper>
