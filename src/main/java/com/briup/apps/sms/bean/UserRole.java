@@ -1,6 +1,6 @@
 package com.briup.apps.sms.bean;
 /**
- * 角色与用户关系
+ * 角色与用户关系学校信息
  * @author lenovo
  *
  */
