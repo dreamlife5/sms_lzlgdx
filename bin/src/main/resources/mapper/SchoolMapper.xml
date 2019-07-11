@@ -7,7 +7,7 @@
     select * from sms_school
   </select>
   <insert id="insert">
-  inert into sms_school values(null,#{name},#{description},#{tel},#{address})
+  insert into sms_school values(null,#{name},#{description},#{tel},#{address})
   </insert>
   <update id="update">
   update  sms_school
@@ -18,6 +18,6 @@
   where id=#{id}
   </update>
   <delete id="deleteById">
-  delete from sms_school where id=#{id}
+  delete from sms_school where id = #{id}
   </delete>
 </mapper>
