@@ -29,4 +29,9 @@ public class UserServiceImpl implements UserService{
 			userDao.update(user);
 		}
 	}
+	@Override
+	public void deleteById(long id) throws Exception {
+		
+		
+	}
 }

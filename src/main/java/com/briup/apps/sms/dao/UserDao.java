@@ -12,4 +12,6 @@ public interface UserDao {
     //更新
     void update(User user);
     
+    void deleteById(User user);
+    
 }

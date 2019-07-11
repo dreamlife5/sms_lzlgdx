@@ -6,4 +6,20 @@
   <select id="selectAll" resultType="com.briup.apps.sms.bean.User">
     select * from sms_user
   </select>
+  <insert id="insert">
+  inert into sms_user values(null,#{realname},#{telephone},#{password},#{student_no},#{gender},#{clazz_id})
+  </insert>
+  <update id="update">
+  update  sms_user
+  set realname=#{realname},
+  telephone=#{telephone},
+  password=#{password},
+  student_no=#{student_no},
+  gender=#{gender},
+  clazz_id=#{clazz_id}
+  where id=#{id}
+  </update>
+  <delete id="deleteById">
+  delete from sms_user where id=#{id}
+  </delete>
 </mapper>
