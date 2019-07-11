@@ -4,6 +4,8 @@ public class School {
 	private Long id;
 	private String name;
 	private String description;
+	private String tel;
+	private String address;
 	public Long getId() {
 		return id;
 	}
@@ -28,13 +30,12 @@ public class School {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public Long getAddress() {
+	public String getAddress() {
 		return address;
 	}
-	public void setAddress(Long address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	private String tel;
-	private Long address;
+	
 	
 	}
