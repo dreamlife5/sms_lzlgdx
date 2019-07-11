@@ -8,20 +8,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.briup.apps.sms.bean.School;
-import com.briup.apps.sms.service.SchoolService;
+import com.briup.apps.sms.bean.College;
+import com.briup.apps.sms.service.CollegeService;
 
 @RestController
-@RequestMapping("/school")
-public class SchoolController {
+@RequestMapping("/college")
+public class CollegeController {
 	@Autowired
-	private SchoolService schoolService;
-	
+	private CollegeService collegeService;
 	@PostMapping("saveOrUpdate")
-	public String saveOrUpdate(School school)
+	public String saveOrUpdate(College college)
 	{
 		try {
-			schoolService.saveOrUpdate(school);
+			collegeService.saveOrUpdate(college);
 			return "更新成功";
 		}catch(Exception e)
 		{
@@ -31,14 +30,14 @@ public class SchoolController {
 	}
 	// http://localhost:8080/school/selectAll
 	@GetMapping("selectAll")
-	public List<School> selectAll(){
-		return schoolService.selectAll();
+	public List<College> selectAll(){
+		return collegeService.selectAll();
 	}
 	// http://localhost:8080/school/deleteById?id=3
 		@GetMapping("deleteById")
 		public String deleteById(long id) {
 			try {
-				schoolService.deleteById(id);
+				collegeService.deleteById(id);
 				return "删除成功";
 			} catch (Exception e) {
 				// 打印异常信息，返回异常信息

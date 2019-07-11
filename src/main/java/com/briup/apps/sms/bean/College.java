@@ -1,11 +1,12 @@
 package com.briup.apps.sms.bean;
-
-public class School {
+/**
+ * 兰州校园信息
+ * */
+public class College {
 	private Long id;
 	private String name;
 	private String description;
-	private String tel;
-	private String address;
+	private Long school_id;
 	public Long getId() {
 		return id;
 	}
@@ -24,18 +25,11 @@ public class School {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getTel() {
-		return tel;
+	public Long getSchool_id() {
+		return school_id;
 	}
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setSchool_id(Long school_id) {
+		this.school_id = school_id;
 	}
 	
-	
-	}
+}
