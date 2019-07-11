@@ -8,7 +8,7 @@ public class User{
 	private String student_no;
 	private String gender;
 	private Long clazz_id;
-	//注意大小写
+	//注意大小写自动生成
 	public Long getId() {
 		return id;
 	}
