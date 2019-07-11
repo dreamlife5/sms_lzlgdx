@@ -31,7 +31,8 @@ public class SchoolServiceImpl implements SchoolService{
 	}
 	@Override
 	public void deleteById(long id) throws Exception {
-		
-		
+		// TODO Auto-generated method stub
+		schoolDao.deleteById(id);
 	}
+
 }
