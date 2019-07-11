@@ -2,22 +2,21 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.briup.apps.sms.dao.SchoolDao">
-  <select id="selectAll" resultType="com.briup.apps.sms.bean.School">
-    select * from sms_school
+<mapper namespace="com.briup.apps.sms.dao.CollegeDao">
+  <select id="selectAll" resultType="com.briup.apps.sms.bean.College">
+    select * from sms_college
   </select>
   <insert id="insert">
-  insert into sms_school values(null,#{name},#{description},#{tel},#{address})
+  inert into sms_college values(null,#{name},#{description},#{school_id})
   </insert>
   <update id="update">
-  update  sms_school
+  update  sms_college
   set name=#{name},
   description=#{description},
-  tel=#{tel},
-  address=#{address}
+  school_id=#{school_id}
   where id=#{id}
   </update>
   <delete id="deleteById">
-  delete from sms_school where id = #{id}
+  delete from sms_college where id=#{id}
   </delete>
 </mapper>
