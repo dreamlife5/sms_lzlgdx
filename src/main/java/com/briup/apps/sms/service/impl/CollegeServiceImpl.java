@@ -31,6 +31,7 @@ public class CollegeServiceImpl implements CollegeService{
 	}
 	@Override
 	public void deleteById(long id) throws Exception {
+		collegeDao.deleteById(id);
 		
 		
 	}
