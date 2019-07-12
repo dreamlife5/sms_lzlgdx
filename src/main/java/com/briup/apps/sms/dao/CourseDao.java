@@ -13,6 +13,6 @@ public interface CourseDao {
 //更新   
    void update(Course course);
 //通过ID删除
-   void delectById(long id);
+   void deletById(long id);
    
 }
